@@ -1,6 +1,6 @@
 from surprise import Dataset, Reader, SVD
 from surprise.model_selection import cross_validate
-import eda
+import utils.eda as eda
 
 reader = Reader(rating_scale=(0, 10))
 data = Dataset.load_from_df(eda.ratings, reader)
